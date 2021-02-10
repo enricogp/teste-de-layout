@@ -1,0 +1,61 @@
+.transicao1
+{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    /*z-index é como se fosse a ordem de renderização*/
+    z-index: 101;
+    background-color: gray;
+
+    /*Começa invisivel, e sem o usuário poder interagir com os botões*/
+    opacity: 0;
+    pointer-events: none;
+
+    /*ease-out é uma transição que acaba mais lenta*/
+    transition: 0.5s ease-out;
+}
+
+.transicao1.ativa
+{
+    /*Página volta a ser visível e interativa*/
+    opacity: 1;
+    pointer-events: all;
+}
+
+.transicao2
+{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    z-index: 101;
+    background-color: gray;
+    transition: 0.5s ease-out;
+}
+
+.transicao2.ativa
+{
+    left: 0px;
+}
+
+.transicao3
+{
+    position: fixed;
+    top: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: 101;
+    background-color: gray;
+    transition: 0.5s ease-out;
+}
+
+.transicao3.ativa
+{
+    top: 0px;
+}
